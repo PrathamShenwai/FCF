@@ -6,7 +6,7 @@ class forecast:
 
     def __init__(self):
         
-        self.api_key = "e00407ec6dd9fcb91abc6ad6b99e9a76"
+        self.api_key = ""
         self.base_url = "http://api.openweathermap.org/data/2.5/weather?"
         self.city = input("Enter city name: ")
         self.pdf=FPDF()

@@ -10,7 +10,7 @@ import pyttsx3
 class WeatherAppGUI:
     def __init__(self, root):
         # Initialize the Weather App GUI
-        self.api_key = "c22346bf747c3447ace32de26ea2ef66"
+        self.api_key = ""
         self.base_url = "http://api.openweathermap.org/data/2.5/weather?"
         self.root = root
         self.root.title("Weather App")
