@@ -1,0 +1,12 @@
+pyttsx3
+espeak
+ffmpeg
+libespeak1
+espeak
+python3-pyaudio
+fpdf
+numpy
+requests
+json
+tk
+tkinter
