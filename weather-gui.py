@@ -24,7 +24,7 @@ class WeatherAppGUI:
 
         # Create time label
         self.hour_label = tk.Label(root, text="Time: " + dt.strftime('%I : %M %p'), bg='white', font=("bold", 15))
-        self.hour_label.place(x=10, y=160)
+        self.hour_label.place(x=5, y=160)
 
         # Create city search entry
         self.city_name = tk.StringVar()
@@ -39,13 +39,13 @@ class WeatherAppGUI:
         self.city_label = tk.Label(root, text="City: ", width=0, bg='white', font=("bold", 15))
         self.city_label.place(x=10, y=63)
         self.country_label = tk.Label(root, text="Country: ", width=0, bg='white', font=("bold", 15))
-        self.country_label.place(x=135, y=63)
+        self.country_label.place(x=185, y=63)
         self.temp_label = tk.Label(root, text="...", width=0, bg='white', font=("Helvetica", 110), fg='black')
-        self.temp_label.place(x=18, y=220)
+        self.temp_label.place(x=10, y=220)
         self.humidity_label = tk.Label(root, text="Humidity (in percent): ", width=0, bg='white', font=("bold", 15))
         self.humidity_label.place(x=3, y=400)
         self.weather_label = tk.Label(root, text="Weather: ", width=0, bg='white', font=("bold", 15))
-        self.weather_label.place(x=45, y=430)
+        self.weather_label.place(x=3, y=430)
         self.note_label = tk.Label(root, text="All temperatures in degree Celsius", bg='white', font=("italic", 10))
         self.note_label.place(x=95, y=495)
 
