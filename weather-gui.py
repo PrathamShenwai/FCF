@@ -6,6 +6,7 @@ import tkinter as tk
 from PIL import ImageTk, Image
 import pyttsx3
 from tkinter import messagebox
+import cv2
 
 
 class WeatherAppGUI:
@@ -96,7 +97,7 @@ class WeatherAppGUI:
                 self.weather = data['weather'][0]['main']
         
                 # Change background image based on weather condition
-                image_path = self.get_image_path(self.weather)
+                image_path = self.get_image_path(self.weather.lower())
                 self.set_background_image(image_path)
 
         
@@ -152,25 +153,18 @@ class WeatherAppGUI:
         self.pdf.output('weather.pdf','F')
 
     
-    def get_image_path(self, weather):
-        # Map weather condition to image filename
-        weather_images = {
-            'clear': 'clearsky.jpg',
-            'clouds': 'clouds.jpeg',
-            'rain': 'rain.jpg',
-            'thunderstorm': 'thunderstorm.jpeg',
-            'snow': 'snow.jpg',
-        }
+    def get_image_path(self):
 
         # Get the image filename based on the weather condition
-        image_filename = weather_images.get(weather.lower(), 'default.jpg')
+        image_filename =  'default.jpg'
 
         # Return the image file path
         return image_filename
 
     def set_background_image(self, image_path):
         # Load the background image using PIL
-        image = Image.open(image_path)
+        image = Image.open("./"+image_path)
+
 
         # Resize the image to fit the window size
         image = image.resize((500, 700), Image.ANTIALIAS)
